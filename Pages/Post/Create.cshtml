@@ -1,0 +1,39 @@
+﻿@page
+@model portifolio_web_site.Pages.Post.CreateModel
+
+@{
+    ViewData["Title"] = "Post Novo";
+}
+
+<div id="create-confirm-container">
+    <h1>@ViewData["Title"]</h1>
+
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="PostModel.Title" class="control-label"></label>
+            <input asp-for="PostModel.Title" class="form-control" />
+            <span asp-validation-for="PostModel.Title" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PostModel.PostContent" class="control-label"></label>
+            <textarea asp-for="PostModel.PostContent" class="form-control"></textarea>
+            <span asp-validation-for="PostModel.PostContent" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="display:none">
+            <label asp-for="PostModel.DateCreate" class="control-label"></label>
+            <input asp-for="@DateTime.Now" class="form-control" />
+            <span asp-validation-for="PostModel.DateCreate" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="display:none">
+            <label asp-for="PostModel.DateUpdate" class="control-label"></label>
+            <input asp-for="@DateTime.Now" class="form-control" />
+            <span asp-validation-for="PostModel.DateUpdate" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="margin-top:5vh;">
+            <input type="submit" value="Postar" class="btn btn-primary" />
+            <a class="btn btn-secondary" style="text-decoration: none; color: white;" asp-page="Index">Voltar</a>
+        </div>
+    </form>
+</div>
+

@@ -1,0 +1,23 @@
+﻿@model portifolio_web_site.Pages.Profile._HomeModel
+
+<div style="display:flex; justify-content:center; align-items:center; height:75vh">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <div class="d-flex justify-content-center align-items-center">
+                    <p class="h2">@Html.DisplayFor(modelItem => Model.ProfileModel[0].Profesion)</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <div class="d-flex justify-content-center align-items-center">
+                    <p class="h2 text-center">@Html.DisplayFor(modelItem => Model.ProfileModel[0].ProfessionalSumary)</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <div class="d-flex justify-content-center align-items-center">
+                    <p class="h2">@Html.DisplayFor(modelItem => Model.ProfileModel[0].PersonalSumary)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

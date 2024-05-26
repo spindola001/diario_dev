@@ -1,0 +1,125 @@
+html {
+	font-size: 14px;
+}
+
+@media (min-width: 768px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+	box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+	position: relative;
+	min-height: 125%;
+}
+
+body {
+	margin-bottom: 60px;
+	background-image: url('/assets/ndyrg7dt8a881.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#nav-bar-home {
+	border-bottom: 0.1vh solid black;
+	box-shadow: 0vh 0vh 3vh -1vh white;
+	background-color: rgba(0, 0, 0, 1);
+}
+
+#navbar-brand-home {
+	padding: 0vh;
+	font-size: 3.8vh;
+	font-weight: 700;
+	text-shadow: 0.7vh 0.7vh 0.3vh rgb(0, 0, 0);
+	color: rgb(40, 100, 255)
+}
+
+#navbarNavAltMarkup {
+	font-size: 4vh;
+	text-shadow: 0.7vh 0.7vh 0.3vh rgb(0, 0, 0);
+	align-content: center;
+	text-align: center;
+	width: 200vh;
+	height: 4vh;
+	animation: spin 5s infinite linear;
+	transform-style: preserve-3d;
+}
+
+@keyframes spin {
+	from {
+		transform: rotateY(0deg);
+	}
+
+	to {
+		transform: rotateY(360deg);
+	}
+}
+
+#home-title, #partial-view-home {
+	background-color: rgba(0, 0, 0, 0.5);
+	text-shadow: 0vh 0.2vh 0.5vh rgb(200, 100, 100);
+	box-shadow: 1vh 1vh 3vh -1vh white;
+	border: 0.1vh solid black;
+	border-radius: 4vh;
+	margin: 3vh;
+	padding: 1.5rem;
+	color: white;
+}
+
+footer.layout-footer {
+	border-top: 0.1vh solid black;
+	box-shadow: 0vh -0.1vh 3vh -0.1vh white;
+	background-color: rgba(0, 0, 0, 1);
+}
+
+div.layout-footer {
+	color: white;
+}
+
+h1#page-title {
+	background-color: rgba(0, 0, 0, 0.5);
+	text-shadow: 0vh 0.2vh 0.5vh rgb(100, 150, 250);
+	box-shadow: 0vh 0vh 1vh -0.1vh white;
+	border: 0.1vh solid black;
+	border-radius: 4vh;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	padding: 1vh;
+	height: 10vh;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+a#create-btn-post {
+	box-shadow: 0.2vh 0.2vh 0.1vh 0.1vh white;
+	color: rgb(40, 100, 255);
+	
+}
+
+.card-custom {
+	background: rgba(0, 0, 0, 0.85);
+}
+
+.card-shadow {
+	box-shadow: 1vh 1vh 1vh -1vh white;
+	margin-top: 2vh;
+}
+
+div#delete-confirm-container, div#details-confirm-container, div#create-confirm-container, div#edit-confirm-container {
+	background-color: rgba(0, 0, 0, 0.85);
+	text-shadow: 0vh 0.2vh 0.5vh rgb(200, 100, 100);
+	box-shadow: 1vh 1vh 3vh -1vh white;
+	border: 0.1vh solid black;
+	border-radius: 4vh;
+	margin: 18vh;
+	padding: 1.5rem;
+	color: white;
+	text-align: center;
+}

@@ -1,0 +1,46 @@
+﻿@page
+@model portifolio_web_site.Pages.Post.DeleteModel
+
+@{
+    ViewData["Title"] = "Deletar Post";
+}
+
+<div id="delete-confirm-container">
+    <h1>@ViewData["Title"]</h1>
+
+    <h3>Confirme a exclusão deste post, ou retorne à página de Posts</h3>
+    <div>
+        <dl class="row">
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.PostModel.Title)
+            </dt>
+            <dd class="col-sm-7">
+                @Html.DisplayFor(model => model.PostModel.Title)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.PostModel.PostContent)
+            </dt>
+            <dd class="col-sm-7">
+                @Html.DisplayFor(model => model.PostModel.PostContent)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.PostModel.DateCreate)
+            </dt>
+            <dd class="col-sm-7">
+                @Html.DisplayFor(model => model.PostModel.DateCreate)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.PostModel.DateUpdate)
+            </dt>
+            <dd class="col-sm-7">
+                @Html.DisplayFor(model => model.PostModel.DateUpdate)
+            </dd>
+        </dl>
+
+        <form method="post">
+            <input type="hidden" asp-for="PostModel.Id" />
+            <input type="submit" value="Excluir" class="btn btn-danger" />
+            <a class="btn btn-secondary" style="text-decoration: none; color: white;" asp-page="./Index">Voltar</a>
+        </form>
+    </div>
+</div>

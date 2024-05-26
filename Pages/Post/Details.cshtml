@@ -1,0 +1,22 @@
+﻿@page
+@model portifolio_web_site.Pages.Post.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div id="details-confirm-container">
+    <h1>@Html.DisplayFor(model => model.PostModel.Title)</h1>
+
+    <div>
+        <p>@Html.DisplayNameFor(model => model.PostModel.DateCreate): @Html.DisplayFor(model => model.PostModel.DateCreate)</p>
+        <hr />
+        <p>
+            @Html.DisplayFor(model => model.PostModel.PostContent)
+        </p>
+    </div>
+    <div>
+        <a class="btn btn-secondary" style="text-decoration: none; color: white;" asp-page="./Edit" asp-route-id="@Model.PostModel.Id">Editar</a>
+        <a class="btn btn-success" style="text-decoration: none; color: white;" asp-page="./Index">Voltar</a>
+    </div>
+</div>

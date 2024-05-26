@@ -1,0 +1,61 @@
+﻿@page
+@model portifolio_web_site.Pages.Post.IndexModel
+
+@{
+    ViewData["Title"] = "Postagens";
+}
+
+<h1 class="text-white" id="page-title">@ViewData["Title"]</h1>
+
+<div>
+    <a id="create-btn-post" class="btn btn-dark" role="button" asp-page="Create">Postar algo novo</a>
+</div>
+
+<div class="container mt-5 w-100">
+    @{
+        int cardsPerRow = 3;
+        int totalCards = Model.PostModel.Count;
+    }
+
+    @for (int i = 0; i < totalCards; i += cardsPerRow)
+    {
+        <div class="row">
+            @for (int j = 0; j < cardsPerRow; j++)
+            {
+                if (i + j < totalCards)
+                {
+                    var item = Model.PostModel[i + j];
+                    <div class="col-4">
+                        <div class="card card-custom card-shadow bg-transparent text-light mb-3">
+                            <div class="card-header card-custom">
+                                Criado em: @Html.DisplayFor(modelItem => item.DateCreate)
+                            </div>
+                            <div class="card-body card-custom">
+                                <h5 class="card-title"><a style="text-decoration: none; color: white;" asp-page="./Details" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Title)</a></h5>
+                                <p class="card-text">@Html.DisplayFor(modelItem => item.PostContent)</p>
+                                <p class="card-text">
+                                    <a class="btn btn-dark" role="button" asp-page="./Edit" asp-route-id="@item.Id">Editar</a>
+                                    <a class="btn btn-danger" role="button" asp-page="./Delete" asp-route-id="@item.Id">Excluir</a>
+                                </p>
+                            </div>
+                            <div class="card-footer card-custom">Atualizado em: @Html.DisplayFor(modelItem => item.DateUpdate)</div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    }
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                    <a asp-page="/Post/Index" asp-route-currentpage="@i" class="page-link">@i</a>
+                </li>
+            }
+        </ul>
+    </nav>
+</div>
+
+
