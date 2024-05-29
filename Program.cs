@@ -28,7 +28,7 @@ if (!app.Environment.IsDevelopment())
 	app.UseHsts();
 }
 
-app.UseHttpsRedirection(); //redireciona solicita��es HTTP para HTTPS
+//app.UseHttpsRedirection(); //redireciona solicita��es HTTP para HTTPS
 app.UseStaticFiles(); //permite que arquivos est�ticos, como HTML, CSS, imagens e JavaScript sejam atendidos
 
 app.UseRouting(); //adiciona a correspond�ncia de rotas ao pipeline de middleware
